@@ -31,7 +31,7 @@ mean(data$edad_madre)
 
 ```{r}
 #MEDIANA
-mean(data$peso_madre)
+mean(data$edad_madre)
 ```
 
 ```{r}
