@@ -1,0 +1,52 @@
+---
+title: "SEMANA 6: COMO LIMPIAR UNA DATA PARA UTILIZAR UNA COLUMNA ESPECIFICA."
+author: "ANCO QUISPE ANGELINA"
+format: html
+editor: visual
+---
+
+## SEMANA 6: COMO LIMPIAR UNA DATA PARA UTILIZAR
+UNA COLUMNA ESPECIFICA. 
+
+**1. Descargar de GIBHUB el Excel para su data, las indicaciones estan en la guia de practica del blackboard.**
+
+**2. En la parte superior derecha en Rstudio nos dirigimos a “Import Dataset” y presionamos “From text (readr)”.**
+
+**3. Una vez la ventana abierta, buscamos el archivo en descargas (browse), copiamos parte del código indicado "**\<- read_csv("C:/Users/User/Downloads/bajo_peso.1.csv")" de code preview **y, 
+por último, importamos.**
+
+**4. Después de ejecutar todo, en la primera ventada hacia la izquierda veras el archivo y en él las variable u otras, por ejemplo: En “IMC” aparece NA, esos datos son los que tendremos que limpiar.**
+
+**5. Luego, la parte copiada del código al importar, lo pegamos, pero antes escribimos “data\<-“, esto nos servirá para que al lado derecho figure los archivos de la data, y proseguimos. Siguiendo,
+comenzamos la redacción de código para limpiar “data_limpia\<-data\[!is.na(data\$imc),\]” y ejecutamos estos códigos con “Ctrl + Enter” al final de cada línea redacta.**
+
+**6. Para visualizar el archivo limpio presionamos la ventana superior del lado derecho “data_limpia” y para ver el archivo que no está limpio “s14_glucosa_circun”, para ver la diferencia.**
+
+##  TRABAJAMOS CON LA DATA DE LA MISMA CLASE:
+
+"GLUCOSA"
+
+```{r}
+#CARGANDO DATA A UTILIZAR 
+data<-read_csv("C:/Users/User/Downloads/s14_glucosa_circun.csv")
+
+```
+
+```{r}
+#LIMPIAR DATA DE UNA COLUMNA QUE CONTENGA FILAS CO NA
+data_limpia<-data[!is.na(data$imc),]
+```
+
+## TRABAJAMOS CON LA DATA CORRESPONDIENTE AL GRUPO 5:
+
+"BAJO_PESO"
+
+```{r}
+#CARGANDO DATA A UTILIZAR
+data<- read_csv("C:/Users/User/Downloads/bajo_peso.1.csv")
+```
+
+```{r}
+#LIMPIAR DATA DE UNA COLUMNA QUE CONTENGA FILAS CO NA
+data_limpia<-data[!is.na(data$edad_madre),]
+```
