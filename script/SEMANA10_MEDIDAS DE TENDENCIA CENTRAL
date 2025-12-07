@@ -1,0 +1,74 @@
+---
+title: "SEMANA10_MEDIDAS DE TENDENCIA CENTRAL"
+author: "ANCO QUISPE ANGELINA"
+format: html
+editor: visual
+---
+
+## VARIABLE EDAD_MADRE
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#IMPORTANDO LA BASE DE DATOS 
+data<- read_csv("C:/Users/User/Downloads/bajo_peso.1.csv")
+```
+
+```{r}
+#ESTRUCTURA DE LA DATA
+str(data)
+```
+
+```{r}
+#MEDIDAS DE TENDENCIA CENTRAL 
+#MEDIA ARITMETICA
+mean(data$edad_madre)
+```
+
+```{r}
+#MEDIANA
+mean(data$peso_madre)
+```
+
+```{r}
+#MODA
+mode_edad_madre<-names(sort(table(data$edad_madre),decreasing = TRUE))
+```
+
+```{r}
+mean(data$edad_madre)
+```
+
+**VARIBLE PESO_MADRE**
+
+```{r}
+#IMPORTANDO LA BASE DE DATOS 
+data<- read_csv("C:/Users/User/Downloads/bajo_peso.1.csv")
+```
+
+```{r}
+#ESTRUCTURA DE LA DATA
+str(data)
+```
+
+```{r}
+#MEDIDAS DE TENDENCIA CENTRAL 
+#MEDIA ARITMETICA
+mean(data$peso_madre)
+```
+
+```{r}
+#MEDIANA
+median(data$peso_madre)
+```
+
+```{r}
+#MODA
+
+mode_peso_madre<-names(sort(table(data$peso_madre),decreasing = TRUE))
+mean(data$peso_madre)
+```
