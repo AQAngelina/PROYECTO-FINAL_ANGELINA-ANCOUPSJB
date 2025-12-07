@@ -1,0 +1,66 @@
+---
+title: "MI PROYECTO FINAL DE SISTEMATIZACIÓN"
+author: "ANCO QUISPE ANGELINA"
+format: html
+editor: visual
+---
+
+## INSTALAR PAQUETES DE MANERA FACIL
+
+**1. En Rstudio, la primera forma para instalar un paquete es dirigiéndonos a “packages”, que se encuentra en la cuarta ventana (inferior derecha) y después, “Install” en la parte inferior derecha.**
+
+**2. En la ventana abierta, escribes el nombre del paquete y lo instalas, una vez instalado, verificar en la lista de paquetes al lado inferior derecho si esta con un** ✔**al lado del nombre, si se visualiza, el paquete está instalado y activado para trabajar con el.**
+
+## INSTALAR PAQUETES DE MANERA MANUAL
+
+3\. La segunda forma para instalar paquetes es desde un **documento Quart,** descargado desde **GIBHUB,** pero para instalarlos, aparte de los nombres escribir: **“install.packages (“\_\_\_“)” y library (\_\_\_\_)”**
+
+```{r}
+install.packages("readr")
+install.packages("fdth")
+```
+
+```{r}
+
+library(readr)
+library(fdth)
+```
+
+**4. Finalmente, en la fechita verde que esta ubicado en la parte superior de cada cuadro “R code Chunk”, presionamos para ejecutar y esperamos para cargar completo, y, por último, ver si esta activado.**
+
+## HISTOGRAMA
+
+Nota: Para visualizar el histograma debe de estar instalado el paquete "ggplot2".
+
+**HISTOGRAMA DE LA VARIABLE PESO_MADRE**
+
+```{r}
+#VISUALIZACIONES GRAFICAS 
+#HISTOGRAMA
+ggplot(data,aes(x=peso_madre))+ geom_histogram(bins = 30)+theme_minimal()
+```
+
+**HISTOGRAMA DE LA VARIABLE EDAD_MADRE**
+
+```{r}
+#VISUALIZACIONES GRAFICAS 
+#HISTOGRAMA
+ggplot(data,aes(x=edad_madre))+ geom_histogram(bins = 30)+theme_minimal()
+```
+
+## OTRA MANERA DE HACER UN HISTOGRAMA:
+
+**5.  En Rstudio, abrimos la ventana superior izquierdo de R script, y redactamos el codigo indicado, recordar que el color es decisión de cada, escribes el nombre del color en ingles para que figure en el gráfico estadístico del histograma.**
+
+Nota: Para trabajar de este modo, tener importado su base de datos o su tabla con sus variables y valores.
+
+```{r}
+#Vamos a crear graficos y tablas, para ello instalar el paquete fdth
+
+
+tabla<- fdt(apertura)
+tabla
+
+hist(apertura)
+hist(apertura,col = "pink")
+```
