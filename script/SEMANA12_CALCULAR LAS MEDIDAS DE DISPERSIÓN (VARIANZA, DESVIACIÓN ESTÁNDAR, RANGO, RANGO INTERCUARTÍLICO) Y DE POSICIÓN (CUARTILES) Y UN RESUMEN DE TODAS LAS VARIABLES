@@ -25,7 +25,7 @@ str(data)
 ```{r}
 #MEDIDAS DE TENDENCIA CENTRAL 
 #MEDIA ARITMETICA
-mean(data$Talla)
+mean(data$edad_madre)
 ```
 
 ```{r}
