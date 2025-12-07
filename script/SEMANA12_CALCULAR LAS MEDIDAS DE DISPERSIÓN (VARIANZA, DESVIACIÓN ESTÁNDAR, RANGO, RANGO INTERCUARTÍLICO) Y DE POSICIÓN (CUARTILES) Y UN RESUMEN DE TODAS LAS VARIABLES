@@ -1,0 +1,159 @@
+---
+title: "SEMANA12"
+author: "ANCO QUISPE ANGELINA"
+format: html
+editor: visual
+---
+
+## VARIABLE EDAD_MADRE
+
+```{r}
+#IMPORTANDO LA BASE DE DATOS 
+data<- read_csv("C:/Users/User/Downloads/bajo_peso.1.csv")
+```
+
+```{r}
+#VER LAS 6 PRIMERAS FILAS
+head(data)
+```
+
+```{r}
+#ESTRUCTURA DE LA DATA
+str(data)
+```
+
+```{r}
+#MEDIDAS DE TENDENCIA CENTRAL 
+#MEDIA ARITMETICA
+mean(data$Talla)
+```
+
+```{r}
+#MEDIANA
+mean(data$peso_madre)
+```
+
+```{r}
+#MODA
+mode_edad_madre<-names(sort(table(data$edad_madre),decreasing = TRUE))
+```
+
+```{r}
+mean(data$edad_madre)
+```
+
+```{r}
+#MEDIDAS DE POSICIÓN 
+#CUARTIL 
+quantile(data$edad_madre, prob = c(0.25,0.5,0.75,0.90,na.rm = TRUE))
+summary(data$edad_madre)
+```
+
+```{r}
+#RESUMEN DE TODAS LAS VARIABLES 
+summary(data)
+```
+
+```{r}
+#MEDIDAS DE DISPERSIÓN 
+#VARIANZA
+var(data$edad_madre,na.rm = TRUE)
+```
+
+```{r}
+#DESVIACIÓN ESTANDAR
+sd(data$edad_madre,na.rm = TRUE)
+```
+
+```{r}
+#RANGO 
+range(data$edad_madre,na.rm = TRUE)
+```
+
+```{r}
+#RANGO INTERCUARTILO
+IQR(data$edad_madre,na.rm = TRUE)
+```
+
+```{r}
+#VISUALIZACIONES GRAFICAS 
+#HISTOGRAMA
+ggplot(data,aes(x=edad_madre))+ geom_histogram(bins = 30)+theme_minimal()
+```
+
+**VARIBLE PESO_MADRE**
+
+```{r}
+#IMPORTANDO LA BASE DE DATOS 
+data<- read_csv("C:/Users/User/Downloads/bajo_peso.1.csv")
+```
+
+```{r}
+#VER LAS 6 PRIMERAS FILAS
+head(data)
+```
+
+```{r}
+#ESTRUCTURA DE LA DATA
+str(data)
+
+```
+
+```{r}
+#MEDIDAS DE TENDENCIA CENTRAL 
+#MEDIA ARITMETICA
+mean(data$peso_madre)
+
+```
+
+```{r}
+#MEDIANA
+median(data$peso_madre)
+```
+
+```{r}
+#MODA
+mode_peso_madre<-names(sort(table(data$peso_madre),decreasing = TRUE))
+
+mean(data$peso_madre)
+```
+
+```{r}
+#MEDIDAS DE POSICIÓN 
+#CUARTIL 
+quantile(data$peso_madre, prob = c(0.25,0.5,0.75,0.90,na.rm = TRUE))
+summary(data$peso_madre)
+```
+
+```{r}
+#RESUMEN DE TODAS LAS VARIABLES 
+summary(data)
+
+```
+
+```{r}
+#MEDIDAS DE DISPERSIÓN 
+#VARIANZA
+var(data$peso_madre,na.rm = TRUE)
+```
+
+```{r}
+#DESVIACIÓN ESTANDAR
+sd(data$peso_madre,na.rm = TRUE)
+```
+
+```{r}
+#RANGO 
+range(data$peso_madre,na.rm = TRUE)
+```
+
+```{r}
+#RANGO INTERCUARTILO
+IQR(data$peso_madre,na.rm = TRUE)
+```
+
+```{r}
+#VISUALIZACIONES GRAFICAS 
+#HISTOGRAMA
+ggplot(data,aes(x=peso_madre))+ geom_histogram(bins = 30)+theme_minimal()
+```
