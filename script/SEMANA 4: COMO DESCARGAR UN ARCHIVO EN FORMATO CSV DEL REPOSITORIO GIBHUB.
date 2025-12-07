@@ -1,0 +1,25 @@
+---
+title: "CARPETA SEMANA 4: COMO DESCARGAR UN ARCHIVO EN FORMATO CSV DEL REPOSITORIO GIBHUB."
+author: "ANCO QUISPE ANGELINA"
+format: html
+editor: visual
+---
+
+##  **SEMANA 4: COMO DESCARGAR UN ARCHIVO EN FORMATO CSV DEL REPOSITORIO GIBHUB.**
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+**1. Nos dirigimos a la guía de practica del curso ubicado en el blackboard.**
+
+**2. Nos dirigimos y entramos al enlace que te indica al comenzar cada actividad programada. Dirección: https://github.com/KJPaez1/Basic_Stat_Methods.**
+
+**3. Al entrar, nos dirigimos donde dice data.**
+
+**4. Una vez dentro, se visualiza distintos archivos Excel ya programados por semanas (2 a la 14).**
+
+**5. Entramos a uno de los archivos y se descarga presionando en icono de la flechita señalando para abajo.**
+
+**6. Una vez descargado esta listo para trabajar como “data” en Rstudio.**
+
+```{r}
+```
